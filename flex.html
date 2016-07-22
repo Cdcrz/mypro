@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0; padding: 0;}
+			.content{zoom: 1;}
+			.content:after{content: '.'; overflow: hidden;display: block; height: 0;visibility: hidden;}
+			.arc{width: 100%;}
+			.arc section{float: left;}
+			.arc section:nth-last-of-type(1){
+				background: #f33;
+				width: 33.3%;
+			}
+			.arc section:nth-last-of-type(2){
+				background: #ededed;
+				width: 33.3%;
+			}
+			.arc section:nth-last-of-type(3){
+				background: #999;
+				width: 33.3%;
+			}
+			.arc1{
+				width: 100%;
+				display: flex;
+			}
+			.arc1 section:nth-last-of-type(1){
+				background: #ededed;
+				width: 33.3%;
+				flex: 1;
+			}
+			.arc1 section:nth-last-of-type(2){
+				background: #999;
+				width: 33.3%;
+				flex: 1;
+			}
+			.arc1 section:nth-last-of-type(3){
+				background: #f33;
+				width: 33.3%;
+				flex: 1;
+			}
+			.arc2{
+				width: 100%;
+				display: -webkit-box;
+				display: box;
+			}
+			.arc2 section:nth-last-of-type(1){
+				background: #ededed;
+				width: 33.3%;
+				-webkit-box-flex: 1;
+			}
+			.arc2 section:nth-last-of-type(2){
+				background: #999;
+				width: 33.3%;
+				-webkit-box-flex: 1;
+			}
+			.arc2 section:nth-last-of-type(3){
+				background: #f33;
+				width: 33.3%;
+				-webkit-box-flex: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<article class="arc content">
+			<section>1</section>
+			<section>2</section>
+			<section>3</section>
+		</article>
+		
+		<article class="arc1">
+			<section>1</section>
+			<section>2</section>
+			<section>3</section>
+		</article>
+		<!--//老版本box注意兼容-->
+		<article class="arc2">
+			<section>1</section>
+			<section>2</section>
+			<section>3</section>
+		</article>
+	</body>
+</html>
