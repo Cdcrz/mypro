@@ -1,0 +1,66 @@
+<header>
+	明日头条
+</header>
+<aside>
+	<p>
+		<span>推荐</span>
+		<span>视频</span>
+		<span>热点</span>
+		<span>社会</span>
+	</p>
+</aside>
+<article>
+	<section ng-repeat="x in news">
+		<!--Title简述-->
+		<p><a ng-href="{{x.url}}">{{x.title}}</a></p>
+		<!--新闻图片-->
+		<img ng-src="{{x.img}}" />
+		<!--文章来源，评论和发表事件-->
+		<p>
+			<span>{{x.author}}</span>
+			<span>时间:{{x.time*1000|date:'short'}}</span>
+		</p>
+	</section>
+</article>
+<style>
+	header{
+		 background: #f33;
+		 position: fixed;
+		 width: 100%;
+		 text-align: center;
+		 color: #fff;
+		 height: 50px;
+		 line-height: 50px;
+	}
+	aside{
+		background: #f4f5f6;
+		padding-top: 50px;
+	}
+	aside p{
+		padding: 10px;
+	}
+	article{
+		position: relative;
+		padding: 0 5px;
+	}
+	article section{
+		 height: 150px;
+		 border-bottom:1px solid #ededed;
+		 padding: 5px;
+	}
+	article section p{
+		 margin: 10px 0 0 10px;
+	}
+	article section p a{
+		text-decoration: none;
+		color: black;
+	}
+	article section img {
+		margin: 10px 0 0 10px;
+		height: 80px;
+	}	
+	article section span {
+		font-size: 10px;
+		color: #999;
+	}
+</style>
