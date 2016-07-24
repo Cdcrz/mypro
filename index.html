@@ -1,242 +1,115 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style>
-.bigbox{border:5px solid #f33; border-radius:5px; width:500px; margin:0 auto; padding:40px; font-size:20px}
-textarea{width:400px; min-height:100px}
-.showfont{width:400px; min-height:100px; border:1px solid #ededed}
-.cor{width:50px; height:20px}
-.mar{margin:20px 10px}
-hr{ margin:20px 0; border:5px solid #ededed; border-radius:5px}
-.showfont{font-size:12px}
-</style>
-<title>无标题文档</title>
-<script type="text/javascript" src="jquery-1.12.0.js"></script>
-<script>
-	jQuery(function($){
-		var engarr=['abandon','abruptly','abuse','account','accusation ','adorn ','amply ','balcony ','bargain ','bedraggle ','benefit','bewildering ','boatman ','boundary ','calender ','calculate ','camera ','casualty ','celebration ','colleague ','community ','composure ','defence ','demonstrate ','description ','direct ','dislocate ','eccentricity ','encouragingly ','exempt ','fantastic '];
-		var zhongarr=['放弃','突然','责骂','考虑 ','罪名 谴责','装饰 ','足够地','阳台 ','讨价还价','拖湿','好处','令人无所适从的','船夫','边界 ','日历 ','计算 ','摄像机','伤亡人员','庆祝会','同事 ','社区','镇静 ','防护 ','证明 ','描述','指引 ','使混乱','怪僻 ','鼓励地','被免除的','难以置信的 '];
-		qudata();//默认显示
-		changecor();//默认显示
-		$('.eng').val(engarr[0]);
-		$('.zhong').val(zhongarr[0]);
-		$('.next').on('click',function(){
-			var a=$('.eng').val();
-			$.each(engarr,function(idx,val){
-				if(a==val){
-					c=idx;
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="css/index.css" />
+		<script src="javascripts/jquery-1.12.0.js"></script>
+	</head>
+	<body>
+		<div class="logo">
+			<div><span>欢迎来到我的个人主页</span></div>
+			<div><span>欢迎来到我的个人主页</span></div>
+		</div>
+		<header>
+			<div class="con-head">
+				<img src="images/111.jpg" alt="头像"  style="width: 200px; height: 200px;" />
+				<hr />
+				<h1>Hi, I am fghtd</h1>
+                <h1>front-end Web developer</h1>
+			</div>
+		</header>
+		<section>
+			<article>
+				<h2>推荐阅读</h2>
+				<ul>
+					<li>
+						<a href="http://pan.baidu.com/s/1eQfkMMA">用AngularJS开发下一代Web应用.zip</a>
+					</li>
+					<li>
+						<a href="http://pan.baidu.com/s/1n016e">HTML5与CSS3设计模式.zip</a>
+					</li>
+					<li>
+						<a href="http://segmentfault.com/a/1190000002640298">JavaScript中的this陷阱的最全收集--没有之一</a>
+					</li>
+					<li>
+						<a href="http://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html">JS函数式编程指南</a>
+					</li>
+					<li>
+						<a href="http://www.runoob.com/">runoob.com-包含各种API集合</a>
+					</li>
+				</ul>
+			</article>
+			<article>
+				<h2>自带技能</h2>
+				<ul>
+					<li>HTML5+css3--实现精美的页面布局</li>
+					<li>原生JavaScript--提供更流畅美观的浏览效果</li>
+					<li>jQuery--write less,do more</li>
+					<li>Angularjs--MVVM、模块化、自动化双向数据绑定、语义化标签、依赖注入</li>
+					<li>bootstrap--基于HTML5和CSS3开发的更为个性化和人性化</li>
+					<li>sass+git+svn--团队合作开发</li>
+					<li>后续神技有待开发</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>联合制作</h2>
+				<ul>
+					<li>温州广厦</li>
+					<li>购物网</li>
+					<li>校园网</li>
+					<li>天国门户网</li>
+					<li>酒店管理系统</li>
+				</ul>
+			</article>
+			<article>
+				<h2>发迹史</h2>
+				<p>一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。</p>
+				<p> 群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大地，谁主沉浮？！</p>
+				<p> 一个少年从大荒中走出，一切从这里开始……</p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>联系方式</h2>
+				<p>adress: 123 Rama IX Road, Bangkok</p>
+				<p>tel:010-020-0890</p>
+				<p>email:easy@company.com</p>
+				<p>web: www.company.com</p>
+			</article>
+			<article>
+				<h2>My Motto</h2>
+				<p>真正的大师永远都怀着一颗学徒的心。</p>
+				<p>不要被骄傲，遮蔽了双眼。</p>
+				<p>怀疑是最强大的敌人。</p>
+			</article>
+		</section>
+		<footer>
+			<p>COPYRIGHT (C) 2013 ALL RIGHTS RESERVED. DESIGN BY CRZ</p>
+		</footer>
+		<div class="bgbox" >
+			<img src="images/tm-bg-slide-1.jpg"/>
+			<img src="images/tm-bg-slide-2.jpg"/>
+			<img src="images/tm-bg-slide-3.jpg" />
+		</div>
+	</body>
+	<script>
+		jQuery(function($){
+			var i=0;
+			$img=$('.bgbox').children();
+			function fn(){
+				i++;
+				if(i>=$img.length){
+					i=0;
 				}
-			})
-			if(c==engarr.length-1){
-				c=-1;	
-			}
-			c++;
-			$('.eng').val(engarr[c]);
-			$('.zhong').val(zhongarr[c])
-		})
-		$('.prev').on('click',function(){
-			var a=$('.eng').val();
-			$.each(engarr,function(idx,val){
-				if(a==val){
-					c=idx;
-				}
-			})
-			if(c==0){
-				c=engarr.length;	
-			}
-			c--;
-			$('.eng').val(engarr[c]);
-			$('.zhong').val(zhongarr[c]);
-			
-		})
-		//改变选项
-		$('.date').on('change',function(){
-			$('.showfont,.eng,.zhong').empty();
-			qudata();
-		})
-		//改变颜色选择
-		$('.cor').on('change',function(){
-				changecor();
-		})
-		//字体变大
-		$('.jia').on('click',function(){
-			if(parseInt($('.showfont').css('font-size'))>=36){
-				$('.showfont').css({fontSize:"36px"});
-				return;
-			}else{
-				$('.showfont').css({fontSize:(parseInt($('.showfont').css('font-size'))+2)+'px'})
-			}
-			
-		})
-		//字体变小
-		$('.jian').on('click',function(){
-			if(parseInt($('.showfont').css('font-size'))<=12){
-				$('.showfont').css({fontSize:"12px"});
-				return;
-			}else{
-				$('.showfont').css({fontSize:(parseInt($('.showfont').css('font-size'))-2)+'px'})
-			}
-			
-		})
-		$('.del').on('click',function(){
-			var c=$('.eng').val();
-			var str=window.localStorage.getItem('sword');
-			str=JSON.parse(str);
-			$.each(str,function(idx,val){
-				if(c==val.english){
-					str.splice(idx,1);
-					aword=[];
-					aword=str;
-					sword=JSON.stringify(aword);
-					window.localStorage.setItem('sword',sword);
-					$('.showfont,.eng,.zhong').empty();
-					qudata();	
-				}
-			});	
 				
-		})
-		var regEnglish=/^[A-Za-z]+$/;//验证输入英文;
-		var regzhong=/^[\u4e00-\u9fa5]{0,}$/;//验证输入中文;
-		var aword=[];//新建数组存储数据;
-		$('.baocun').on('click',function(){
-			
-			var date=new Date();//获取当前时间存储当前存储数据的时间
-			var a=$('.eng').val().replace(/ /g,'');
-			var b=$('.zhong').val().replace(/ /g,'');
-			if(a!=''&&b!=''&&regEnglish.test(a)&&regzhong.test(b)){
-				var jsona={};//建立对象存储当前输入的值;
-				jsona={'english':$('.eng').val(),'zhongwen':$('.zhong').val(),'times':date.getTime(),'size':$('.showfont').css('font-size'),'color':('.showfont').css('color'),'bgcolor':('.showfont').css('background')};
-				if(aword!=''){
-					quchong();
-				}else{
-					var str=window.localStorage.getItem('sword');
-					str=JSON.parse(str);
-					$.each(str,function(idx,val){
-						aword.push(val);
-					});
-					if(aword==null){
-						aword.shift();
-						aword.push(jsona);
-						sword=JSON.stringify(aword);
-						window.localStorage.setItem('sword',sword);
-						return;
-					}
-					quchong();
-					
-					
-				}
-				//去重数据
-				function quchong(){
-						var xinarr=[];
-						xinarr.push(jsona);
-						var bNothave=true;
-						$.each(aword,function(idx,val){
-							bNothave=true;
-							$.each(xinarr,function(idex,valu){
-								if(val.english==valu.english){
-									bNothave=false;	
-								}
-							})
-							if(bNothave){
-								xinarr.push(val);	
-							}
-						})
-						aword=[];
-						aword=xinarr;
-						sword=JSON.stringify(aword);
-						window.localStorage.setItem('sword',sword);	
-					}
-			}else{
-				alert('请输入正确完整的中英文')
+				$img.eq(i).animate({opacity:1,}).css('zIndex','1');
+				
+				$img.eq(i).siblings().animate({opacity:0,}).css('zIndex','0');
 			}
-			$('.showfont,.eng,.zhong').empty();
-			qudata();
+			setInterval(fn,2000);
 		})
-		//颜色改变
-		function changecor(){
-			$('.cor').eq(0).css({background:$('.cor').eq(0).children(':selected').val()});
-			$('.cor').eq(1).css({background:$('.cor').eq(1).children(':selected').val()});
-			$('.showfont').css({background:$('.cor').eq(1).css('background'),color:$('.cor').eq(0).children(':selected').val()})
-		}
-		//取数据显示在文本框内;
-		function qudata(){
-			var a=$('.date').children(':selected').val();
-			var date=new Date();//获取当前时间;
-			var one=86400000;//24小时的毫秒数;
-			var str=window.localStorage.getItem('sword');
-			str=JSON.parse(str);
-			$.each(str,function(idx,val){
-				if(date.getTime()-val.times<(one*a)){
-					$('<p/>').html(val.english+"; "+val.zhongwen).appendTo($('.showfont'));
-				}
-			})	
-		}
-	})
-</script>
-</head>
-
-<body>
-    <div class="bigbox">
-        <div>
-        	<label>回顾</label>
-            <select class="date">
-                <option value="1" selected="selected">一天内</option>
-                <option value="5">五天内</option>
-                <option value="7">一周内</option>
-            </select>
-            <input type="button" value="上一个" class="prev" />
-            <input type="button" value="下一个" class="next" />
-        </div>
-        <hr />
-        <div>
-            <p>英文表达</p>
-            <textarea class="eng"></textarea>
-            <p>中文翻译</p>
-            <textarea class="zhong"></textarea>
-            <p><input type="button" value="保存内容" class="mar baocun" /><input type="button" value="删除内容"  class="mar del"/></p>
-            <hr />
-            <p>所有单词阅读</p>
-            <div class="showfont"></div>
-        </div>
-        <div>
-            <input type="button" value="A+" class="mar jia" /><input type="button" value="A-" class="mar jian" /><label>字体颜色</label>
-            <select class="cor">
-                  <option value="White" style="background:white;"></option>
-                  <option value="Black" style="background:black;" selected="selected"></option>
-                  <option value="Red" style="background:red;" ></option>
-                  <option value="Yellow" style="background:yellow;"></option>
-                  <option value="Pink" style="background:pink;"></option>
-                  <option value="Green" style="background:green;"></option>
-                  <option value="Orange" style="background:orange;"></option>
-                  <option value="Purple" style="background:purple;"></option>
-                  <option value="Blue" style="background:blue;"></option>
-                  <option value="Beige" style="background:beige;"></option>
-                  <option value="Brown" style="background:brown;"></option>
-                  <option value="Teal" style="background:teal;"></option>
-                  <option value="Navy" style="background:navy;"></option>
-                  <option value="Maroon" style="background:maroon;"></option>
-                  <option value="LimeGreen" style="background:limegreen;"></option>  
-                  </select>
-            <label>背景颜色</label>
-            <select class="cor">
-                  <option value="White" style="background:white;" selected="selected"></option>
-                  <option value="Black" style="background:black;"></option>
-                  <option value="Red" style="background:red;"></option>
-                  <option value="Yellow" style="background:yellow;"></option>
-                  <option value="Pink" style="background:pink;"></option>
-                  <option value="Green" style="background:green;"></option>
-                  <option value="Orange" style="background:orange;"></option>
-                  <option value="Purple" style="background:purple;"></option>
-                  <option value="Blue" style="background:blue;"></option>
-                  <option value="Beige" style="background:beige;"></option>
-                  <option value="Brown" style="background:brown;"></option>
-                  <option value="Teal" style="background:teal;"></option>
-                  <option value="Navy" style="background:navy;"></option>
-                  <option value="Maroon" style="background:maroon;"></option>
-                  <option value="LimeGreen" style="background:limegreen;"></option>  
-           </select>  
-        </div>
-    </div>
-</body>
+	</script>
 </html>
